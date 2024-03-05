@@ -9,7 +9,7 @@ const schema = Joi.object({
         .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
 });
 
-export const loginMiddleware = async(req: Request, res: Response, next: NextFunction) => {
+export const userValidation = async(req: Request, res: Response, next: NextFunction) => {
     const { error } = schema.validate(req.body);
 
     if (error) return res.status(400).json({ message: "Bad request 400" });
