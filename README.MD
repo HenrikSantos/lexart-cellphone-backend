@@ -37,6 +37,7 @@ Deploy: [API](https://lexart-cellphone-backend.vercel.app/)
     - JSON WEB TOKEN
     - Joi
     - Helmet
+    - bcrypt
     - Sqlite (ambiente de produção)
     - PostgreSQL (ambiente de produção)
     - Vercel Host
