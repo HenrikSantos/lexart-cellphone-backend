@@ -6,9 +6,11 @@ import { authenticateUser } from "../middlewares/authenticateUser";
 
 const cellphoneRouter = express.Router();
 
+cellphoneRouter.use(authenticateUser);
+
 cellphoneRouter.get("/", getAllCellphonesController);
-cellphoneRouter.post("/", authenticateUser, requestBodyStandardizer, createCellphonesController);
-cellphoneRouter.put("/:id", authenticateUser, updateMiddleware, updateCellphoneController);
-cellphoneRouter.delete("/:id", authenticateUser, deleteCellphoneController);
+cellphoneRouter.post("/", requestBodyStandardizer, createCellphonesController);
+cellphoneRouter.put("/:id", updateMiddleware, updateCellphoneController);
+cellphoneRouter.delete("/:id", deleteCellphoneController);
 
 export default cellphoneRouter;
