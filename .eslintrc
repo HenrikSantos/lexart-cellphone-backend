@@ -1,0 +1,55 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": [
+        "./backend/tsconfig.json"
+      ]
+    },
+    "env": {
+        "browser": false,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "plugins": [
+      "import",
+      "@typescript-eslint"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "eqeqeq": "error",
+        "no-unused-vars": "error",
+        "no-var": "error",
+        "prefer-const": "error",
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "arrow-spacing": "error",
+        "no-extra-semi": "error",
+        "space-before-function-paren": ["error", "never"],
+        "object-curly-spacing": ["error", "always"],
+        "prefer-arrow-callback": "error",
+        "prefer-template": "error",
+        "no-extra-parens": "error",
+        "no-use-before-define": "error",
+        "padding-line-between-statements": [
+          "error",
+          { "blankLine": "always", "prev": "*", "next": "function" },
+          { "blankLine": "always", "prev": "*", "next": "return" }
+        ],
+        "func-call-spacing": ["error", "never"],
+        "eol-last": ["error", "always"]
+      },
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts",
+          ".js",
+          ".tsx"
+        ]
+      },
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+  }
