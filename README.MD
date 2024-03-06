@@ -161,6 +161,7 @@ Aqui estão as principais rotas da API:
     - Para Editar um celular a API aceita apenas a seguinte estrutura:
     ```json
     {
+        "id": 1,
         "name": "Iphone 14 Pro",
         "brand": "Iphone",
         "model": "14 Pro",
